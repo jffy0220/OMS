@@ -34,6 +34,10 @@ import { ReturnModule } from './return/return.module';
 import { ReturnType } from './return_type/return_type.entity';
 import { ReturnProcessProcedure } from './return_process_procedure/return_process_procedure.entity';
 import { Return } from './return/return.entity';
+import { OrderLineItemsController } from './order_line_items/order_line_items.controller';
+import { OrderLineItemsService } from './order_line_items/order_line_items.service';
+import { OrderLineItemsModule } from './order_line_items/order_line_items.module';
+import { OrderLineItem } from './order_line_items/order_line_item.entity';
 
 @Module({
   imports: [
@@ -44,8 +48,9 @@ import { Return } from './return/return.entity';
       username: 'user',
       password: 'password',
       database: 'OMS',
-      entities: [Order, Customer, Address, Order_Type, OrderTypeStatus, ReturnType, ReturnProcessProcedure, Return],
-      synchronize: false
+      entities: [Order, Customer, Address, Order_Type, OrderTypeStatus, ReturnType, ReturnProcessProcedure, Return, OrderLineItem],
+      synchronize: false,
+      keepConnectionAlive: true
     }),
     OrderModule,
     CustomerModule,
@@ -54,7 +59,8 @@ import { Return } from './return/return.entity';
     OrderTypeStatusModule,
     ReturnTypeModule,
     ReturnProcessProcedureModule,
-    ReturnModule
+    ReturnModule,
+    OrderLineItemsModule
   ],
   controllers: [AppController],
   providers: [AppService],
