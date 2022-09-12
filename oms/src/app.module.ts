@@ -35,7 +35,7 @@ import { PurchaseOrderModule } from './purchase-order/purchase-order.module';
       port: 3306,
       username: 'user',
       password: 'password',
-      database: 'OMS',
+      database: 'Lyte',
       entities: [Order, Customer, Address, Order_Type, OrderTypeStatus, ReturnType, ReturnProcessProcedure, Return, OrderLineItem, Receiver, PurchaseOrder, PurchaseOrderLineItems],
       synchronize: false,
       keepConnectionAlive: true
