@@ -26,6 +26,8 @@ import { PurchaseOrder } from './purchase-order/purchase-order.entity';
 import { PurchaseOrderLineItems } from './purchase-order-line-items/purchase-order-line-items.entity';
 import { PurchaseOrderLineItemsModule } from './purchase-order-line-items/purchase-order-line-items.module';
 import { PurchaseOrderModule } from './purchase-order/purchase-order.module';
+import { OrderMessagesModule } from './order_messages/order_messages.module';
+import { OrderMessages } from './order_messages/order_messages.entity';
 
 @Module({
   imports: [
@@ -36,7 +38,7 @@ import { PurchaseOrderModule } from './purchase-order/purchase-order.module';
       username: 'user',
       password: 'password',
       database: 'Lyte',
-      entities: [Order, Customer, Address, Order_Type, OrderTypeStatus, ReturnType, ReturnProcessProcedure, Return, OrderLineItem, Receiver, PurchaseOrder, PurchaseOrderLineItems],
+      entities: [Order, Customer, Address, Order_Type, OrderTypeStatus, ReturnType, ReturnProcessProcedure, Return, OrderLineItem, Receiver, PurchaseOrder, PurchaseOrderLineItems, OrderMessages],
       synchronize: false,
       keepConnectionAlive: true
     }),
@@ -51,7 +53,8 @@ import { PurchaseOrderModule } from './purchase-order/purchase-order.module';
     OrderLineItemsModule,
     ReceiverModule,
     PurchaseOrderLineItemsModule,
-    PurchaseOrderModule
+    PurchaseOrderModule,
+    OrderMessagesModule
   ],
   controllers: [AppController],
   providers: [AppService],
