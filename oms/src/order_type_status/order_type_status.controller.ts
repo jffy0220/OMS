@@ -11,7 +11,7 @@ export class OrderTypeStatusController {
         return this.orderTypeStatusService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<OrderTypeStatus> {
         return this.orderTypeStatusService.findOne(id);
     }

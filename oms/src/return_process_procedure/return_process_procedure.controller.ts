@@ -11,7 +11,7 @@ export class ReturnProcessProcedureController {
         return this.returnProcessProcedureService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<ReturnProcessProcedure> {
         return this.returnProcessProcedureService.findOne(id);
     }

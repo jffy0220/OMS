@@ -15,7 +15,7 @@ export class PurchaseOrderLineItemsController {
         return this.poLineItemService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<PurchaseOrderLineItems> {
         return this.poLineItemService.findOne(id);
     }

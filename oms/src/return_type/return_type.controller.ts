@@ -11,7 +11,7 @@ export class ReturnTypeController {
         return this.returnTypeService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<ReturnType> {
         return this.returnTypeService.findOne(id);
     }

@@ -8,22 +8,22 @@ export class OrderController {
     constructor(private orderService: OrderService) {}
 
     @Get()
-    async findAll(): Promise<Order[]> {
+    async findAll(): Promise<any[]> {
         return this.orderService.findAll()
     }
 
     @Get(':id')
-    async findOne(@Param('id') id: string): Promise<Order> {
+    async findOne(@Param('id') id: string): Promise<any> {
         return this.orderService.findOne(id);
     }
 
     @Post()
-    create(@Body() order: Order) {
+    create(@Body() order: any) {
         return this.orderService.create(order);
     }
 
     @Put()
-    update(@Body() order: Order) {
+    update(@Body() order: any) {
         return this.orderService.update(order);
     }
 }

@@ -11,7 +11,7 @@ export class OrderLineItemsController {
         return this.orderLineItemService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<OrderLineItem> {
         return this.orderLineItemService.findOne(id);
     }

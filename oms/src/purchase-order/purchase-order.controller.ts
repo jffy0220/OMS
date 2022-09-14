@@ -11,7 +11,7 @@ export class PurchaseOrderController {
         return this.purchaseOrderService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<PurchaseOrder> {
         return this.purchaseOrderService.findOne(id);
     }

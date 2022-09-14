@@ -11,7 +11,7 @@ export class AddressController {
         return this.addressService.findAll()
     }
 
-    @Get()
+    @Get(':id')
     async findOne(@Param('id') id: string): Promise<Address> {
         return this.addressService.findOne(id);
     }

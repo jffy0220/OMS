@@ -1,5 +1,6 @@
 import { Body, Injectable, Param } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Customer } from 'src/customer/customer.entity';
 import { Repository } from 'typeorm';
 import { Order } from './order.entity';
 
